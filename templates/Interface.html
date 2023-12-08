@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Loan Application Form</title>
+    <style>
+
+
+.card{
+    border: 1px solid black;
+    border-radius: 5%;
+
+    background-color: whitesmoke;
+}
+.card-body{
+    color:black;
+
+}
+
+.icon-link {
+
+    height:4vh;
+    width:3vw;
+        }
+
+.icon-link-Web {
+
+    height:4vh;
+    width:3vw;
+        }
+
+.image {
+  background-image: url('https://cdn.futura-sciences.com/sources/giec-rapport-rechauffement-climatique.jpg'); /* Chemin de l'image de fond */
+  background-size: cover;
+  color: #fff;
+  padding: 20px;
+
+  min-height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+/*me
+h1{
+            color:rgb(240, 239, 237);
+            font-size:30px;
+
+           background: linear-gradient(135deg, rgb(84, 157, 204) 20%, rgb(117, 139, 140) );
+
+            height: 50px;
+            width:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2vh;
+            border: 1px solid black;
+
+}*/
+h1{
+            color:rgb(240, 239, 237);
+            font-size:40px;
+           /* background-color: rgb(173, 178, 183);*/
+           background: linear-gradient(135deg, rgb(84, 157, 204) 20%, rgb(117, 139, 140) );
+            border-radius: 10px;
+            height: 20vh;
+            width:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2vh;
+            border: 1px solid black;
+            font-family: serif;
+
+}
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+img{
+    height:15vw;
+    width:18vw;
+    margin-top: 1vh;
+    border-radius: 5%;
+}
+/*
+.image {
+    background-image: url('https://cdn.futura-sciences.com/sources/giec-rapport-rechauffement-climatique.jpg');
+    background-size: cover;
+    color: #f9f5f5;
+    padding: 20px;
+    text-align: center;
+}
+*/
+.principaleTitle {
+    color: #3b5998;
+}
+
+.form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    color: #3b5998;
+    display: block;
+    margin-bottom: 5px;
+}
+/* me
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #857b7b;
+    width: 60%;
+    box-sizing: border-box;
+    margin: 0 auto 10px auto;
+    margin-top: 3vh;
+
+}*/
+.labell{
+    color:rgb(231, 189, 74);
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+}
+input {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 60%;
+    box-sizing: border-box;
+    margin: 0 auto 10px auto; /* Centre l'input et ajoute un peu d'espace en bas */
+    margin-top: 3vh;
+    background-color: antiquewhite;
+
+}
+.buttons {
+    text-align: center;
+}
+/*
+.buttons button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}*/
+.buttons button {
+    background-color:rgb(84, 157, 204); /* Couleur bleu non foncé */
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 10px; /* Ajoute un peu d'espace entre les boutons */
+}
+.buttons button:hover {
+    background-color: #0056b3; /* Couleur bleu foncé au survol */
+}
+
+.result {
+    color: #3b5998;
+    margin-top: 20px;
+    text-align: center;
+}
+/*me
+textarea {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+*/
+textarea {
+    width: 60%;
+    padding: 10px;
+    border-radius:20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Centre le textarea */
+    background-color: antiquewhite;
+}
+a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.pere{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+    </style>
+</head>
+<body>
+    <div class="image">
+        <div>
+
+            <a href="https://www.facebook.com/events/887893066284644" target="_blank"  >
+            <img src="https://cdn-icons-png.flaticon.com/128/3670/3670124.png" class="icon-link" >
+        </a>
+        <a href="https://www.nuitdelinfo.com/" target="_blank"  >
+            <img src="https://cdn-icons-png.flaticon.com/128/4008/4008504.png" class="icon-link-Web">
+        </a></div>
+    <h1 >FAIRE FACE AU CHANGEMENT CLIMATIQUE : LE VRAI DU FAUX
+    </h1>
+
+    <form  class="form" id="afficherRes" >
+        <label class="labell" for="recheche">Entrez une information sur le climat à vérifier:</label>
+        <input id="recheche" name="recheche" type="text" >
+
+      <div class="buttons">
+         <button type="button" id="predict-button">Predict</button>
+
+        <button type="reset" id="reset">Reset</button></div>
+
+        <h4 class="labell">result:</h4>
+        <textarea id="my-textarea" name="textarea-name" rows="4" cols="50" readonly value="eeee"></textarea>
+
+    </form>
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<div class="pere">
+
+
+
+<div class="card" style="width: 18rem;">
+    <img src="https://reseauactionclimat.org/wp-content/uploads/2022/04/karsten-wurth-zkwgoruyumk-unsplash-1536x864.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> Quelles solutions face au changement climatique ?</h5>
+      <p class="card-text">
+    <ul>
+        <li>Sortir des énergies fossiles et investir dans les énergies renouvelables.</li>
+        <li>Réduire la demande énergétique en adoptant des modes de vie plus sobres.</li>
+        <li>S'adapter aux effets du changement climatique qui sont déjà en cours.</li>
+        <li>Gérer les risques climatiques de manière inclusive et efficace.</li>
+    </ul>
+</p>
+
+      <a class="btn btn-primary" href="https://reseauactionclimat.org/6e-rapport-du-giec-quelles-solutions-face-au-changement-climatique/">plus de details</a>
+    </div>
+  </div>
+
+<div class="card" style="width: 18rem;">
+    <img src="https://img.freepik.com/vecteurs-premium/adolescent-etudie-science-du-climat-changements-climatiques-climatologie-naufrage-global-incendies-foret_98982-518.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">le changement climatique est urgent et nous devons agir maintenant pour limiter ses effets.</h5>
+      <p class="card-text">   <ul>
+        <li>Réchauffement climatique</li>
+        <li>Urgence climatique</li>
+        <li>Événements météorologiques extrêmes</li>
+        <li>Émissions de gaz à effet de serre</li>
+        <li>Action climatique</li>
+        <li>Limiter le réchauffement</li>
+    </ul></p>
+      <a class="btn btn-primary" href="https://reseauactionclimat.org/comprendre-urgence/">plus de details</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img src="https://larbredesimaginaires.fr/wp-content/uploads/2020/10/LArbre-des-Imaginaires-feuilles-HCC-logo.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Haut Conseil pour le Climat (HCC).</h5>
+      <p class="card-text">   <ul>
+        <li>Le réchauffement climatique est réel et s'accélère:Les données scientifiques montrent que la température moyenne de la Terre a augmenté de 1,1°C depuis l'ère préindustrielle/li>
+        <li>Les effets du changement climatique se font déjà sentir.</li>
+        <li>La France est engagée à atteindre la neutralité carbone en 2050</li>
+        <li>Les politiques publiques françaises en matière de climat sont insuffisantes. </li>
+
+      <a class="btn btn-primary" href="https://www.hautconseilclimat.fr//">plus de details</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img src="https://vivre-slow.com/wp-content/uploads/2021/04/transition-ecologique-changement.jpg" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title"> Réussir la transition ecologique</h5>
+      <p class="card-text">
+    <ul>
+        <li>L'ADEME, une agence publique pour la transition écologique.</li>
+        <li>Exemples d'actions de l'ADEME.</li>
+        <li>L'ADEME, un acteur majeur de la transition écologique.</li>
+        <li>L'ADEME et le changement climatique.</li>
+    </ul>
+</p>
+
+      <a class="btn btn-primary" href="https://www.ademe.fr/">plus de details</a>
+    </div>
+  </div>
+  <div></div>
+</div>
+</div>
+<script>
+    $(document).ready(function () {
+        var formData;
+        $("#reset").click(function () {
+            $("#my-textarea").html("");
+            formData = "";
+            $("#recheche").val("");
+        });
+
+        $("#predict-button").click(function () {
+            formData = $("#afficherRes").serialize();
+            $.ajax({
+                type: "POST",
+                url: "/predict",
+                data: formData,
+                success: function (response) {
+                    console.log(formData);
+                    var prediction = response.prediction;
+                    $("#my-textarea").html("Prediction : " + prediction);
+                },
+                error: function () {
+                    $("#my-textarea").html("Une erreur s'est produite.");
+                }
+            });
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
